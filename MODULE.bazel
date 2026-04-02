@@ -1,24 +1,38 @@
-# Bzlmod Configuration
+"""Bazel module for multiple maven_install lock files example."""
 
 module(
-    name = "maven",
-    version = "0.1",
+    name = "bazel_multiple_maven_locks",
+    version = "1.0.0",
 )
 
-# Maven Core installation
-maven_install(
+bazel_dep(name = "rules_jvm_external", version = "6.0")
+
+maven = use_extension("@rules_jvm_external//:extension.bzl", "maven")
+
+maven.install(
     name = "maven_core",
     artifacts = [
-        "com.google.guava:guava:30.1-jre",
+        "com.google.guava:guava:31.1-jre",
+        "org.slf4j:slf4j-api:1.7.36",
     ],
-    lock_file = "maven_core.lock",
+    fetch_sources = True,
+    lock_file = "//:maven_core_lock.json",
+    repositories = [
+        "https://repo1.maven.org/maven2",
+    ],
 )
 
-# Maven Testing installation
-maven_install(
+maven.install(
     name = "maven_testing",
     artifacts = [
         "junit:junit:4.13.2",
+        "org.mockito:mockito-core:4.6.1",
     ],
-    lock_file = "maven_testing.lock",
+    fetch_sources = True,
+    lock_file = "//:maven_testing_lock.json",
+    repositories = [
+        "https://repo1.maven.org/maven2",
+    ],
 )
+
+use_repo(maven, "maven_core", "maven_testing")

@@ -1,0 +1,23 @@
+{
+  "http_archive": [],
+  "maven": [
+    {
+      "coordinates": "com.google.guava:guava:31.1-jre",
+      "file": "v1/https/repo1.maven.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar",
+      "mirror_urls": [
+        "https://repo1.maven.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar"
+      ],
+      "sha256": "8e1ab3b7e7b8b4e1c3d5c7e8f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a",
+      "netrc": ""
+    },
+    {
+      "coordinates": "org.slf4j:slf4j-api:1.7.36",
+      "file": "v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar",
+      "mirror_urls": [
+        "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar"
+      ],
+      "sha256": "a8111c8a5c7b6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1",
+      "netrc": ""
+    }
+  ]
+}

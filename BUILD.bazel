@@ -1,0 +1,25 @@
+# Example showing how to use dependencies from both maven repositories
+
+load("@maven_core//:defs.bzl", maven_core_artifacts = "artifacts")
+load("@maven_testing//:defs.bzl", maven_testing_artifacts = "artifacts")
+
+# Example target using core production dependencies
+java_library(
+    name = "core_lib",
+    srcs = ["CoreLib.java"],
+    deps = [
+        maven_core_artifacts["com.google.guava:guava"],
+        maven_core_artifacts["org.slf4j:slf4j-api"],
+    ],
+)
+
+# Example test target using testing dependencies
+java_test(
+    name = "example_test",
+    srcs = ["ExampleTest.java"],
+    deps = [
+        ":core_lib",
+        maven_testing_artifacts["junit:junit"],
+        maven_testing_artifacts["org.mockito:mockito-core"],
+    ],
+)

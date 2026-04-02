@@ -1,0 +1,23 @@
+{
+  "http_archive": [],
+  "maven": [
+    {
+      "coordinates": "junit:junit:4.13.2",
+      "file": "v1/https/repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar",
+      "mirror_urls": [
+        "https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar"
+      ],
+      "sha256": "8e495b634469d64fb8acfa3495a065cdc1c2b9da36f36cc3019e5370db1aab5a",
+      "netrc": ""
+    },
+    {
+      "coordinates": "org.mockito:mockito-core:4.6.1",
+      "file": "v1/https/repo1.maven.org/maven2/org/mockito/mockito-core/4.6.1/mockito-core-4.6.1.jar",
+      "mirror_urls": [
+        "https://repo1.maven.org/maven2/org/mockito/mockito-core/4.6.1/mockito-core-4.6.1.jar"
+      ],
+      "sha256": "a416ba1e1e2e82e2a7c0e1e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a",
+      "netrc": ""
+    }
+  ]
+}
